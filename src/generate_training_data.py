@@ -62,10 +62,45 @@ amount_ranges = {
     "income": (5, 3000)
 }
 
+locations = [
+    "LONDON",
+    "MANCHESTER",
+    "BIRMINGHAM",
+    "ONLINE",
+    "UK",
+    "OXFORD ST",
+    "CAMDEN",
+    "VICTORIA"
+]
+
 def generate_random_date(start_date, end_date):
     days_between = (end_date - start_date).days
     random_days = random.randint(0, days_between)
     return start_date + timedelta(days=random_days)
+
+#Adding realistic variation to transaction descriptions like reference numbers, locations, symbols, mixed formatting and inconsistent spacing
+def add_noise(description):
+    noisy_description = description
+
+    if random.random() < 0.65:
+        noisy_description += f" {random.choice(locations)}"
+
+    if random.random() < 0.55:
+        noisy_description += f" REF {random.randint(1000, 999999)}"
+
+    if random.random() < 0.35:
+        noisy_description = noisy_description.replace(" ", "  ")
+
+    if random.random() < 0.25:
+        noisy_description = noisy_description + " CARD PAYMENT"
+
+    if random.random() < 0.20:
+        noisy_description = noisy_description.replace(" ", " * ")
+
+    if random.random() < 0.20:
+        noisy_description = noisy_description.lower()
+
+    return noisy_description
 
 
 def create_transaction(category, start_date, end_date):
