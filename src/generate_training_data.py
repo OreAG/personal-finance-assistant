@@ -103,10 +103,11 @@ def add_noise(description):
     return noisy_description
 
 
-def create_transaction(category, start_date, end_date):
-    merchant = random.choice(category_merchants[category])
-    min_amount, max_amount = amount_ranges[category]
+def create_transaction(category, start_date, end_date, include_category=True):
+    base_description = random.choice(category_merchants[category])
+    merchant = add_noise(base_description)
 
+    min_amount, max_amount = amount_ranges[category]
     amount = round(random.uniform(min_amount, max_amount), 2)
 
     if category != "income":
@@ -114,14 +115,17 @@ def create_transaction(category, start_date, end_date):
 
     transaction_date = generate_random_date(start_date, end_date)
 
-    return {
+    transaction = {
         "date": transaction_date.strftime("%Y-%m-%d"),
         "description": merchant,
-        "amount": amount,
-        "category": category
+        "amount": amount
     }
+    if include_category:
+        transaction["category"]= category
 
-def generate_dataset(rows_per_category=100):
+    return transaction
+
+def generate_dataset(rows_per_category=150):
     start_date = datetime(2026, 1, 1)
     end_date = datetime(2026, 6, 30)
 
@@ -129,7 +133,12 @@ def generate_dataset(rows_per_category=100):
 
     for category in category_merchants:
         for _ in range(rows_per_category):
-            transaction = create_transaction(category, start_date, end_date)
+            transaction = create_transaction(
+                category=category,
+                start_date=start_date,
+                end_date=end_date,
+                include_category=True
+            )
             transactions.append(transaction)
 
     random.shuffle(transactions)
@@ -137,13 +146,43 @@ def generate_dataset(rows_per_category=100):
     df = pd.DataFrame(transactions)
     df.to_csv("data/training_transactions.csv", index=False)
 
-    print("Synthetic training dataset created.")
+    print("Messier synthetic training dataset created.")
     print(f"Rows created: {len(df)}")
     print("\nCategory counts:")
     print(df["category"].value_counts())
     print("\nFirst five rows:")
     print(df.head())
 
+def generate_sample_upload_dataset(number_of_rows=60):
+    start_date = datetime(2026, 7, 1)
+    end_date = datetime(2026, 7, 31)
+
+    categories = list(category_merchants.keys())
+    transactions = []
+
+    for _ in range(number_of_rows):
+        category = random.choice(categories)
+
+        transaction = create_transaction(
+            category=category,
+            start_date=start_date,
+            end_date=end_date,
+            include_category=False
+        )
+
+        transactions.append(transaction)
+
+    random.shuffle(transactions)
+
+    df = pd.DataFrame(transactions)
+    df.to_csv("data/sample_transactions.csv", index=False)
+
+    print("\nSample upload dataset created.")
+    print(f"Rows created: {len(df)}")
+    print("\nFirst five rows:")
+    print(df.head())
+
 
 if __name__ == "__main__":
-    generate_dataset(rows_per_category=100)
+    generate_dataset(rows_per_category=150)
+    generate_sample_upload_dataset(number_of_rows=60)

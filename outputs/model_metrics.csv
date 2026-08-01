@@ -1,2 +1,2 @@
 model,accuracy,precision,recall,f1_score,training_rows,testing_rows
-TF-IDF + Logistic Regression,1.0,1.0,1.0,1.0,720,180
+TF-IDF + Logistic Regression,1.0,1.0,1.0,1.0,1080,270
