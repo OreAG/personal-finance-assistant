@@ -1,0 +1,61 @@
+date,description,amount,clean_description,predicted_category
+2026-07-26,ARGOS VICTORIA,-70.16,argos victoria,shopping
+2026-07-18,INTEREST * PAID * REF * 581607,1152.9,interest paid ref 581607,income
+2026-07-25,DENTAL  PRACTICE  ONLINE,-79.29,dental practice online,health_fitness
+2026-07-25,SPORTS MASSAGE CLINIC REF 140359,-115.18,sports massage clinic ref 140359,health_fitness
+2026-07-30,NATIONAL  RAIL  TICKET CARD PAYMENT,-57.12,national rail ticket card payment,transport
+2026-07-18,THAMES  WATER  LONDON  REF  396758,-141.91,thames water london ref 396758,bills
+2026-07-09,pharmacy *  * prescription *  * birmingham *  * ref *  * 596787,-103.77,pharmacy prescription birmingham ref 596787,health_fitness
+2026-07-12,UBER EATS ONLINE,-63.73,uber eats online,eating_out
+2026-07-23,BP  FUEL,-22.74,bp fuel,transport
+2026-07-10,ZIPCAR UK LONDON REF 855653,-29.67,zipcar uk london ref 855653,transport
+2026-07-24,NANDOS LONDON REF 570141 CARD PAYMENT,-11.15,nandos london ref 570141 card payment,eating_out
+2026-07-25,BONUS PAYMENT VICTORIA,2249.28,bonus payment victoria,income
+2026-07-11,GO *  * APE *  * ACTIVITY *  * VICTORIA,-90.23,go ape activity victoria,entertainment
+2026-07-07,SPOTIFY * UK * REF * 647839,-28.7,spotify uk ref 647839,subscriptions
+2026-07-04,TICKETMASTER UK REF 639550,-23.39,ticketmaster uk ref 639550,entertainment
+2026-07-05,NEXT RETAIL UK,-58.98,next retail uk,shopping
+2026-07-05,SKY  STORE  MOVIE  REF  338725,-26.57,sky store movie ref 338725,entertainment
+2026-07-09,BONUS PAYMENT REF 161778,2169.02,bonus payment ref 161778,income
+2026-07-01,nandos london victoria,-47.5,nandos london victoria,eating_out
+2026-07-05,WAITROSE SUPERMARKET UK REF 156159,-48.4,waitrose supermarket uk ref 156159,groceries
+2026-07-04,AMAZON *  * PRIME *  * UK *  * CAMDEN,-3.89,amazon prime uk camden,subscriptions
+2026-07-28,NANDOS LONDON UK REF 814773 CARD PAYMENT,-5.95,nandos london uk ref 814773 card payment,eating_out
+2026-07-21,BOWLING LONDON BIRMINGHAM REF 96407,-11.61,bowling london birmingham ref 96407,entertainment
+2026-07-02,asda groceries card payment,-19.74,asda groceries card payment,groceries
+2026-07-25,O2 MOBILE BILL CAMDEN REF 627797,-46.59,o2 mobile bill camden ref 627797,bills
+2026-07-20,O2 MOBILE BILL CAMDEN,-36.11,o2 mobile bill camden,bills
+2026-07-20,MICROSOFT 365 REF 26882,-11.35,microsoft 365 ref 26882,subscriptions
+2026-07-21,holland  and  barrett  ref  430354,-11.0,holland and barrett ref 430354,health_fitness
+2026-07-21,PUREGYM MEMBERSHIP,-107.99,puregym membership,health_fitness
+2026-07-28,ASDA GROCERIES UK REF 847003,-87.98,asda groceries uk ref 847003,groceries
+2026-07-18,NATIONAL * RAIL * TICKET * OXFORD * ST * REF * 406334,-62.12,national rail ticket oxford st ref 406334,transport
+2026-07-08,DISNEY PLUS,-2.46,disney plus,subscriptions
+2026-07-05,STEAM * GAMES * VICTORIA * CARD * PAYMENT,-30.76,steam games victoria card payment,entertainment
+2026-07-06,VIRGIN MEDIA BILL REF 416597,-119.64,virgin media bill ref 416597,bills
+2026-07-05,ALDI STORE BIRMINGHAM REF 730088,-20.97,aldi store birmingham ref 730088,groceries
+2026-07-22,asda  groceries  online  ref  52288,-51.29,asda groceries online ref 52288,groceries
+2026-07-30,trainline * oxford * st * ref * 420273,-37.64,trainline oxford st ref 420273,transport
+2026-07-27,ARGOS  LONDON  REF  325814 CARD PAYMENT,-102.15,argos london ref 325814 card payment,shopping
+2026-07-14,UBER  TRIP  HELP.UBER.COM  VICTORIA  REF  758878,-54.74,uber trip help uber com victoria ref 758878,transport
+2026-07-01,PRET A MANGER UK REF 101548,-38.56,pret a manger uk ref 101548,eating_out
+2026-07-07,shell petrol station ref 776070,-58.08,shell petrol station ref 776070,transport
+2026-07-29,zara  online  camden card payment,-74.28,zara online camden card payment,shopping
+2026-07-02,STEAM GAMES UK REF 841144 CARD PAYMENT,-85.18,steam games uk ref 841144 card payment,entertainment
+2026-07-21,bp * fuel * ref * 315067,-34.36,bp fuel ref 315067,transport
+2026-07-29,SAINSBURYS  LOCAL  UK CARD PAYMENT,-61.04,sainsburys local uk card payment,groceries
+2026-07-15,CAFFE NERO OXFORD ST REF 679929,-60.88,caffe nero oxford st ref 679929,eating_out
+2026-07-05,spotify * uk * uk * ref * 79701 * card * payment,-26.97,spotify uk uk ref 79701 card payment,subscriptions
+2026-07-30,interest * paid * manchester * ref * 395853,2802.7,interest paid manchester ref 395853,income
+2026-07-12,PHARMACY * PRESCRIPTION * CAMDEN * REF * 458485,-31.28,pharmacy prescription camden ref 458485,health_fitness
+2026-07-10,STARBUCKS COFFEE REF 900601,-26.42,starbucks coffee ref 900601,eating_out
+2026-07-10,DELIVEROO  ORDER,-15.67,deliveroo order,eating_out
+2026-07-08,wagamama ref 817902,-60.86,wagamama ref 817902,eating_out
+2026-07-28,SPOTIFY UK LONDON REF 324479,-8.5,spotify uk london ref 324479,subscriptions
+2026-07-21,SKY STORE MOVIE,-108.07,sky store movie,entertainment
+2026-07-12,zipcar * uk * card * payment,-73.83,zipcar uk card payment,transport
+2026-07-12,o2  mobile  bill  london,-137.61,o2 mobile bill london,bills
+2026-07-03,BOWLING  LONDON  CAMDEN  REF  126246 CARD PAYMENT,-9.31,bowling london camden ref 126246 card payment,entertainment
+2026-07-13,BONUS PAYMENT ONLINE REF 24304,2918.42,bonus payment online ref 24304,income
+2026-07-29,o2  mobile  bill  ref  343475,-34.11,o2 mobile bill ref 343475,bills
+2026-07-04,ODEON * CINEMA,-22.42,odeon cinema,entertainment
