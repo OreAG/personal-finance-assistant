@@ -54,7 +54,60 @@ if uploaded_file is not None:
         categorised_df = categorise_transactions(transactions_df, model)
 
         st.subheader("Categorised transactions")
-        st.dataframe(categorised_df)
+
+        categorised_display_df = categorised_df.copy()
+
+        if "prediction_confidence" in categorised_display_df.columns:
+            categorised_display_df["prediction_confidence"] = categorised_display_df[
+                "prediction_confidence"
+            ].apply(lambda value: f"{value:.0%}" if pd.notna(value) else "N/A")
+
+        st.dataframe(categorised_display_df)
+
+        st.subheader("Low-confidence predictions for review")
+
+        confidence_threshold_percent = st.slider(
+            "Select confidence threshold",
+            min_value=0,
+            max_value=100,
+            value=60,
+            step=5,
+            format="%d%%"
+        )
+
+        confidence_threshold = confidence_threshold_percent/100
+
+        if "prediction_confidence" in categorised_df.columns:
+            low_confidence_df = categorised_df[
+                categorised_df["prediction_confidence"] < confidence_threshold
+            ]
+            st.write(
+                f"Transactions below {confidence_threshold_percent}% confidence: "
+                f"{len(low_confidence_df)}"
+            )
+
+            if len(low_confidence_df) >0:
+                low_confidence_display_df = low_confidence_df.copy()
+
+                low_confidence_display_df["prediction_confidence"] = low_confidence_display_df[
+                    "prediction_confidence"
+                ].apply(
+                    lambda value: f"{value:.0%}" if pd.notna(value) else "N/A"
+                )
+
+                st.dataframe(low_confidence_display_df)
+
+
+                st.download_button(
+                    label="Download low-confidence transactions",
+                    data=low_confidence_df.to_csv(index=False),
+                    file_name="low_confidence_transactions.csv",
+                    mime="text/csv"
+                )
+            else:
+                st.success("No low-confidence transactions detected at the selected threshold.")
+        else:
+            st.warning("Prediction confidence is not available for this model.")
 
         prepared_df = prepare_transaction_data(categorised_df)
         category_summary = calculate_spending_by_category(prepared_df)
