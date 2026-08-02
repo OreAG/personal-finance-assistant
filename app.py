@@ -109,7 +109,61 @@ if uploaded_file is not None:
         else:
             st.warning("Prediction confidence is not available for this model.")
 
-        prepared_df = prepare_transaction_data(categorised_df)
+        st.subheader("Review and correct categories")
+
+        st.write(
+            "The predicted categories can be reviewed and corrected before the spending "
+            "summary and recommendations are generated. This supports the feedback loop "
+            "in the system design."
+        )
+
+        category_options = [
+            "bills",
+            "eating_out",
+            "entertainment",
+            "groceries",
+            "health_fitness",
+            "income",
+            "shopping",
+            "subscriptions",
+            "transport"
+        ]
+
+        review_df = categorised_df[
+            ["date", "description", "amount", "predicted_category", "prediction_confidence"]
+        ].copy()
+
+        review_df["prediction_confidence"] = review_df["prediction_confidence"].apply(
+            lambda value: f"{value:.0%}" if pd.notna(value) else "N/A"
+        )
+
+        review_df["final_category"] = categorised_df["predicted_category"]
+
+        edited_review_df = st.data_editor(
+            review_df,
+            column_config={
+                "final_category": st.column_config.SelectboxColumn(
+                    "Final category",
+                    options=category_options,
+                    required=True
+                )
+            },
+            disabled=[
+                "date",
+                "description",
+                "amount",
+                "predicted_category",
+                "prediction_confidence"
+            ],
+            use_container_width=True,
+            key="category_review_editor"
+        )
+
+        final_df = categorised_df.copy()
+        final_df["final_category"] = edited_review_df["final_category"].values
+        final_df["predicted_category"] = final_df["final_category"]
+
+        prepared_df = prepare_transaction_data(final_df)
         category_summary = calculate_spending_by_category(prepared_df)
 
         st.subheader("Spending by predicted category")
@@ -129,7 +183,7 @@ if uploaded_file is not None:
 
             st.plotly_chart(spending_chart, use_container_width=True)
 
-        recommendations_df = generate_recommendations(categorised_df)
+        recommendations_df = generate_recommendations(final_df)
 
         st.subheader("Recommendations")
         st.write(
@@ -162,7 +216,7 @@ if uploaded_file is not None:
 
         st.download_button(
             label="Download categorised transactions",
-            data=categorised_df.to_csv(index=False),
+            data=final_df.to_csv(index=False),
             file_name="categorised_transactions.csv",
             mime="text/csv"
         )
