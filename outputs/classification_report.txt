@@ -1,3 +1,5 @@
+TF-IDF + Logistic Regression
+============================
                 precision    recall  f1-score   support
 
          bills       1.00      1.00      1.00        30
@@ -13,3 +15,24 @@ health_fitness       1.00      1.00      1.00        30
       accuracy                           1.00       270
      macro avg       1.00      1.00      1.00       270
   weighted avg       1.00      1.00      1.00       270
+
+
+TF-IDF + Linear SVM
+===================
+                precision    recall  f1-score   support
+
+         bills       1.00      1.00      1.00        30
+    eating_out       1.00      1.00      1.00        30
+ entertainment       1.00      1.00      1.00        30
+     groceries       1.00      1.00      1.00        30
+health_fitness       1.00      1.00      1.00        30
+        income       1.00      1.00      1.00        30
+      shopping       1.00      1.00      1.00        30
+ subscriptions       1.00      1.00      1.00        30
+     transport       1.00      1.00      1.00        30
+
+      accuracy                           1.00       270
+     macro avg       1.00      1.00      1.00       270
+  weighted avg       1.00      1.00      1.00       270
+
+

@@ -1,2 +1,3 @@
 model,accuracy,precision,recall,f1_score,training_rows,testing_rows
 TF-IDF + Logistic Regression,1.0,1.0,1.0,1.0,1080,270
+TF-IDF + Linear SVM,1.0,1.0,1.0,1.0,1080,270
