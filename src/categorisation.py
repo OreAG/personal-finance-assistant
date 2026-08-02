@@ -29,6 +29,12 @@ def categorise_transactions(df, model):
     categorised_df["clean_description"] = categorised_df["description"].apply(clean_description)
     categorised_df["predicted_category"] = model.predict(categorised_df["clean_description"])
 
+    if hasattr(model, "predict_proba"):
+        prediction_probabilities = model.predict_proba(categorised_df["clean_description"])
+        categorised_df["prediction_confidence"] = prediction_probabilities.max(axis=1)
+    else:
+        categorised_df["prediction_confidence"] = None
+
     return categorised_df
 
 #Loads the sample transaction file, categorises the transactions and saves categorised output.

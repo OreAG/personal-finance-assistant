@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -77,13 +78,34 @@ if uploaded_file is not None:
 
         recommendations_df = generate_recommendations(categorised_df)
 
-        st.subheader("Transparent recommendations")
+        st.subheader("Recommendations")
         st.write(
             "Each recommendation includes the rule trigger and suggested action, "
             "so the user can understand why it was generated."
         )
 
         st.dataframe(recommendations_df)
+
+        st.subheader("Model evaluation")
+
+        metrics_path = "outputs/model_metrics.csv"
+        report_path = "outputs/classification_report.txt"
+
+        if os.path.exists(metrics_path):
+            metrics_df = pd.read_csv(metrics_path)
+            st.write("Summary of the trained transaction categorisation model:")
+            st.dataframe(metrics_df)
+        else:
+            st.warning("Model metrics file not found. Run src/model_training.py to generate metrics.")
+
+        if os.path.exists(report_path):
+            with open(report_path, "r") as file:
+                classification_report_text = file.read()
+
+            st.text("Detailed classification report:")
+            st.code(classification_report_text)
+        else:
+            st.warning("Classification report file not found. Run src/model_training.py to generate the report.")
 
         st.download_button(
             label="Download categorised transactions",
