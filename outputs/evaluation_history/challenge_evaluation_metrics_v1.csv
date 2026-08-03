@@ -1,0 +1,2 @@
+dataset,model,accuracy,precision,recall,f1_score,rows_evaluated
+challenge_transactions,saved_best_model,0.3611111111111111,0.4455337690631808,0.3611111111111111,0.34250440917107583,36

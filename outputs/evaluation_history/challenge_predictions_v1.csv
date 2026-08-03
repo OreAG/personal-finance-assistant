@@ -1,0 +1,37 @@
+date,description,amount,category,clean_description,predicted_category,prediction_confidence,correct_prediction
+2026-08-01,CO OP FOOD CAMDEN,-24.3,groceries,co op food camden,entertainment,0.13472455024166735,False
+2026-08-01,ICELAND FOODS ONLINE,-42.1,groceries,iceland foods online,shopping,0.4775983681449615,False
+2026-08-02,OCADO DELIVERY,-68.95,groceries,ocado delivery,eating_out,0.12133223577625628,False
+2026-08-02,FARMFOODS STORE 443,-19.2,groceries,farmfoods store 443,groceries,0.6545952120073942,True
+2026-08-03,BOLT RIDE LONDON,-13.45,transport,bolt ride london,entertainment,0.27962020895709455,False
+2026-08-03,LIME BIKE RENTAL,-5.99,transport,lime bike rental,eating_out,0.12133223577625628,False
+2026-08-04,RYANAIR FLIGHT BOOKING,-89.99,transport,ryanair flight booking,eating_out,0.12133223577625628,False
+2026-08-04,PARKING PAYMENT WESTMINSTER,-12.0,transport,parking payment westminster,income,0.6452892652523667,False
+2026-08-05,ADOBE CREATIVE CLOUD,-19.97,subscriptions,adobe creative cloud,eating_out,0.12133223577625628,False
+2026-08-05,NOTION SOFTWARE SUBSCRIPTION,-8.0,subscriptions,notion software subscription,eating_out,0.12133223577625628,False
+2026-08-06,MONZO PLUS MONTHLY FEE,-5.0,subscriptions,monzo plus monthly fee,subscriptions,0.5280492211331373,True
+2026-08-06,LINKEDIN PREMIUM,-34.99,subscriptions,linkedin premium,eating_out,0.12133223577625628,False
+2026-08-07,OCTOPUS ENERGY PAYMENT,-112.4,bills,octopus energy payment,bills,0.31603782163067007,True
+2026-08-07,SKY BROADBAND BILL,-39.5,bills,sky broadband bill,bills,0.42902126639886407,True
+2026-08-08,HMRC SELF ASSESSMENT,-220.0,bills,hmrc self assessment,eating_out,0.12133223577625628,False
+2026-08-08,INSURANCE DIRECT DEBIT,-58.3,bills,insurance direct debit,eating_out,0.12133223577625628,False
+2026-08-09,ITSU LONDON BRIDGE,-11.45,eating_out,itsu london bridge,entertainment,0.27962020895709455,False
+2026-08-09,FIVE GUYS STRATFORD,-18.7,eating_out,five guys stratford,eating_out,0.12133223577625628,True
+2026-08-10,JUST EAT ORDER 88391,-23.6,eating_out,just eat order 88391,eating_out,0.5298262767429751,True
+2026-08-10,GAILS BAKERY,-7.25,eating_out,gails bakery,eating_out,0.12133223577625628,True
+2026-08-11,UNIQLO REGENT STREET,-49.9,shopping,uniqlo regent street,eating_out,0.12133223577625628,False
+2026-08-11,ETSY MARKETPLACE,-27.8,shopping,etsy marketplace,shopping,0.5577140405553923,True
+2026-08-12,EBAY COMMERCE UK,-36.1,shopping,ebay commerce uk,subscriptions,0.5307117949136658,False
+2026-08-12,PRIMARK OXFORD STREET,-31.5,shopping,primark oxford street,eating_out,0.14961463847387277,False
+2026-08-13,OPTICIAN APPOINTMENT,-55.0,health_fitness,optician appointment,eating_out,0.12133223577625628,False
+2026-08-13,THERAPY SESSION,-70.0,health_fitness,therapy session,eating_out,0.12133223577625628,False
+2026-08-14,GP PRIVATE CONSULTATION,-95.0,health_fitness,gp private consultation,eating_out,0.12133223577625628,False
+2026-08-14,VITAMIN SHOP ONLINE,-22.4,health_fitness,vitamin shop online,shopping,0.4775983681449615,False
+2026-08-15,ROYAL ALBERT HALL TICKETS,-65.0,entertainment,royal albert hall tickets,entertainment,0.5225429685413318,True
+2026-08-15,AMAZON VIDEO RENTAL,-4.99,entertainment,amazon video rental,income,0.271072622616962,False
+2026-08-16,MINI GOLF LONDON,-15.5,entertainment,mini golf london,entertainment,0.27962020895709455,True
+2026-08-16,MUSEUM EXHIBITION TICKET,-18.0,entertainment,museum exhibition ticket,transport,0.42431533301444263,False
+2026-08-17,EMPLOYER PAYROLL,2450.0,income,employer payroll,eating_out,0.12133223577625628,False
+2026-08-17,CLIENT INVOICE PAYMENT,420.0,income,client invoice payment,income,0.6452892652523667,True
+2026-08-18,VINTED SALE PAYMENT,18.5,income,vinted sale payment,income,0.6452892652523667,True
+2026-08-18,REFUND FROM ZARA,39.99,income,refund from zara,income,0.3087537628752907,True

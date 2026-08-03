@@ -1,0 +1,15 @@
+                precision    recall  f1-score   support
+
+         bills       1.00      0.50      0.67         4
+    eating_out       0.18      0.75      0.29         4
+ entertainment       0.40      0.50      0.44         4
+     groceries       1.00      0.25      0.40         4
+health_fitness       0.00      0.00      0.00         4
+        income       0.60      0.75      0.67         4
+      shopping       0.33      0.25      0.29         4
+ subscriptions       0.50      0.25      0.33         4
+     transport       0.00      0.00      0.00         4
+
+      accuracy                           0.36        36
+     macro avg       0.45      0.36      0.34        36
+  weighted avg       0.45      0.36      0.34        36
