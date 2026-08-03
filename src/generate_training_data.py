@@ -49,6 +49,87 @@ category_merchants = {
     ]
 }
 
+additional_category_merchants = {
+    "groceries": [
+        "CO OP STORE",
+        "Marks & Spencer",
+        "ICELAND FOODS",
+        "OCADO GROCERY",
+        "FARMFOODS",
+        "LOCAL FOOD STORE",
+        "SUPERMARKET PAYMENT"
+    ],
+    "transport": [
+        "BOLT RIDE",
+        "LIME BIKE",
+        "AIRLINE BOOKING",
+        "FLIGHT BOOKING",
+        "PARKING PAYMENT",
+        "TAXI RIDE",
+        "CAR PARK"
+    ],
+    "subscriptions": [
+        "ADOBE SOFTWARE",
+        "NOTION SUBSCRIPTION",
+        "PREMIUM MONTHLY FEE",
+        "SOFTWARE SUBSCRIPTION",
+        "MONTHLY MEMBERSHIP",
+        "DIGITAL SUBSCRIPTION"
+    ],
+    "bills": [
+        "OCTOPUS ENERGY",
+        "BROADBAND BILL",
+        "INSURANCE DIRECT DEBIT",
+        "HMRC PAYMENT",
+        "UTILITY PAYMENT",
+        "DIRECT DEBIT BILL"
+    ],
+    "eating_out": [
+        "ITSU RESTAURANT",
+        "FIVE GUYS",
+        "JUST EAT",
+        "BAKERY PAYMENT",
+        "CAFE PURCHASE",
+        "RESTAURANT BILL"
+    ],
+    "shopping": [
+        "UNIQLO",
+        "ETSY MARKETPLACE",
+        "EBAY COMMERCE",
+        "PRIMARK",
+        "ONLINE RETAIL",
+        "CLOTHING STORE"
+    ],
+    "health_fitness": [
+        "OPTICIAN APPOINTMENT",
+        "THERAPY SESSION",
+        "PRIVATE GP",
+        "VITAMIN SHOP",
+        "HEALTH CLINIC",
+        "WELLNESS APPOINTMENT"
+    ],
+    "entertainment": [
+        "CONCERT TICKETS",
+        "VIDEO RENTAL",
+        "MINI GOLF",
+        "MUSEUM TICKET",
+        "EXHIBITION ENTRY",
+        "LIVE EVENT"
+    ],
+    "income": [
+        "EMPLOYER PAYROLL",
+        "CLIENT INVOICE",
+        "SALE PAYMENT",
+        "REFUND PAYMENT",
+        "PAYROLL CREDIT",
+        "INVOICE RECEIVED"
+    ]
+}
+
+
+for category, merchants in additional_category_merchants.items():
+    category_merchants[category].extend(merchants)
+
 
 amount_ranges = {
     "groceries": (8, 95),
